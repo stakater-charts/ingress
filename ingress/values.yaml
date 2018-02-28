@@ -1,0 +1,14 @@
+ingress:
+  namespace: default
+  host: stackator.com
+  serviceName: frontend
+  servicePort: 80
+  forceSSLRedirect: "true"
+  ingressClass: external-ingress
+  # annotations:
+  # - key: testAnnotation
+  #   value: testValue
+  # - key: testAnnotation
+  #   value: testValue
+  # tlsHosts:
+  # - stackator.com

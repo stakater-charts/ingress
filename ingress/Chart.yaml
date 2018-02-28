@@ -1,0 +1,11 @@
+apiVersion: v1
+name: ingress
+description: ingress chart that runs on kubernetes
+version: 1.0.0
+keywords:
+  - ingress
+  - kubernetes
+home: https://github.com/stakater/chart-ingress
+maintainers:
+- name: Stakater
+  email: stakater@aurorasolutions.io
