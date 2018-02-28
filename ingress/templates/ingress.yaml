@@ -3,14 +3,14 @@ kind: Ingress
 metadata:
   annotations:
     {{- with .Values.ingress.forceSSLRedirect }}
-    ingress.kubernetes.io/force-ssl-redirect: {{ . }}
+    ingress.kubernetes.io/force-ssl-redirect: "{{ . }}"
     {{- end }}
     {{- with .Values.ingress.ingressClass }}
     kubernetes.io/ingress.class: {{ . }}
     {{- end }}
     {{- with .Values.ingress.annotations }}
     {{- range . }}
-    {{ .key }}: {{ .value }} 
+    {{ .key }}: {{ .value }}
     {{- end }}
     {{- end }}
   name: {{ template "name" . }}
