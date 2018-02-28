@@ -13,7 +13,7 @@ metadata:
     {{ .key }}: {{ .value }}
     {{- end }}
     {{- end }}
-  name: {{ template "name" . }}
+  name: {{ .Release.Name }}
 spec:
   rules:
   - host: {{ .Values.ingress.host }}
