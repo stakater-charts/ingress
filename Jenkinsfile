@@ -18,7 +18,7 @@ toolsNode(toolsImage: 'stakater/pipeline-tools:1.2.0') {
         }
 
         stage('Prepare Chart') {
-            helm.lint(WORKSPACE, mysqlChartName)
+            helm.lint(WORKSPACE, chartName)
             chartPackageName = helm.package(WORKSPACE, chartName)
         }
 
