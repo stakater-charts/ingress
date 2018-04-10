@@ -10,7 +10,7 @@ metadata:
     {{- end }}
     {{- with .Values.ingress.annotations }}
     {{- range . }}
-    {{ .key }}: {{ .value }}
+    {{ .key }}: {{ .value | quote }}
     {{- end }}
     {{- end }}
   name: {{ .Release.Name }}
