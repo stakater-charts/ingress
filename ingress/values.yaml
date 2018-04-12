@@ -1,9 +1,9 @@
 ingress:
   namespace: default
   host: stackator.com
-  service:
-    name: frontend
-    port: 80
+#  service:
+#    name: frontend
+#    port: 80
   forceSSLRedirect: "true"
   ingressClass: external-ingress
   # annotations:
