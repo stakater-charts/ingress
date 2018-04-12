@@ -17,11 +17,13 @@ metadata:
 spec:
   rules:
   - host: {{ .Values.ingress.host }}
+    {{- with .Values.ingress.service }}
     http:
       paths:
       - backend:
-          serviceName: {{ .Values.ingress.serviceName }}
-          servicePort: {{ .Values.ingress.servicePort }}
+          serviceName: {{ .name }}
+          servicePort: {{ .port }}
+    {{- end }}
   {{- with .Values.ingress.tlsHosts }}
   tls:
   - hosts:
