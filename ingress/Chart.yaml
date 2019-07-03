@@ -1,7 +1,7 @@
 apiVersion: v1
 name: ingress
-description: ingress chart that runs on kubernetes
-version: 1.0.0
+description: Ingress chart for all kind of applications
+version: 0.0.2
 keywords:
   - ingress
   - kubernetes
